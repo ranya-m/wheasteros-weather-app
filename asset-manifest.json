@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/wheasteros-weather-app/static/css/main.0ed1ae96.css",
+    "main.js": "/wheasteros-weather-app/static/js/main.cad80245.js",
+    "static/media/bg-image.jpg": "/wheasteros-weather-app/static/media/bg-image.ab84ec006ab367e391de.jpg",
+    "index.html": "/wheasteros-weather-app/index.html",
+    "main.0ed1ae96.css.map": "/wheasteros-weather-app/static/css/main.0ed1ae96.css.map",
+    "main.cad80245.js.map": "/wheasteros-weather-app/static/js/main.cad80245.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ed1ae96.css",
+    "static/js/main.cad80245.js"
+  ]
+}
