@@ -13,10 +13,17 @@ body {
   display: grid;
   height: 100vh;
   place-items: center;
+  overflow-x: hidden;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    height: max-content;
+  }
 }

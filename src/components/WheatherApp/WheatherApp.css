@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
-/* parent containers */
+/* WHOLE APP CONTAINER */
 
 .weather-app-container {
-    /* display: flex; */
     flex-wrap: wrap;
     margin: 0 auto;
     text-align: center;
     justify-content: center;
-    /* gap: 100px; */
 }
 
+/* TOP INPUT CONTAINER */
+
 .top-container {
-    width: 40%;
+    width: min-content;
     align-self: center;
     padding: 20px;
     display: flex;
@@ -28,6 +28,7 @@
     color: whitesmoke;
     text-shadow: rgba(0, 0, 0, 0.295) 2px 2px 2px;
     text-align: center;
+    opacity: 92%;
 }
 
 .top-container h1,
@@ -35,62 +36,7 @@
     margin: 0 auto;
 }
 
-.city-temp {
-    margin: 5px auto;
-    display: flex;
-    align-items: center;
-}
-
-.city{
-    width: 40%;
-    padding-right: 5px;
-    font-size: 0.5em;
-    display: flex;
-    justify-content: center;
-    /* place-items: center; */
-}
-
-.todayPrev {
-    width: 60%;
-    font-size: 0.7em;  
-    border-left: 1px rgba(255, 255, 255, 0.674) solid;
-
-}
-
-#appLogo {
-    text-shadow: rgb(70, 70, 71) 2px 3px 2px !important;
-}
-
-
-
-
-/* FORECAST container */
-.forecast-container {
-    padding: 2px 10px 7px;
-    display: flex;
-    flex-direction: column;
-    background-color: #108dc7b7;
-    width: 100vw;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.forecast-items {
-    display: flex;
-}
-
-.dayInfos {
-    padding: 0px 20px;
-    border-right: 1px rgba(255, 254, 254, 0.24) solid;
-    text-shadow: rgba(0, 0, 0, 0.164) 1px 1px 1px;
-}
-
-.nextBtn {
-    width: 10%;
-    height: 50px;
-}
-
-/* form */
+/* FORM IN THE TOP CONTAINER */
 
 form {
     display: flex;
@@ -136,11 +82,58 @@ input:focus{
     opacity: 0.7;
 }
 
-h2 {
-    width: 100%;
+/* PREVISIONS IN TOP CONTAINER */
+
+.city-temp {
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
 }
 
-/* HORIZONTAL SCROLLBAR  */
+.city{
+    width: 40%;
+    padding-right: 5px;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.todayPrev {
+    width: 60%;
+    font-size: 0.7em;  
+    border-left: 1px rgba(255, 255, 255, 0.674) solid;
+
+}
+
+#appLogo {
+    text-shadow: rgb(70, 70, 71) 2px 3px 2px !important;
+}
+
+
+/* FORECAST CONTAINER */
+
+.forecast-container {
+    padding: 2px 10px 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: #108dc7b7;
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.forecast-items {
+    display: flex;
+}
+
+.dayInfos {
+    padding: 0px 20px;
+    border-right: 1px rgba(255, 254, 254, 0.24) solid;
+    text-shadow: rgba(0, 0, 0, 0.164) 1px 1px 1px;
+}
+
+
+/* HORIZONTAL SCROLLBAR OF THE FORECAST CONTAINER  */
 
 /* width */
 ::-webkit-scrollbar {
@@ -161,4 +154,58 @@ h2 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(64, 109, 206);
+}
+
+/* RESPONSIVE DESIGN OF THE APP */
+
+@media only screen and (max-width: 500px) {
+    .weather-app-container {
+        width: 100vw;
+    }
+
+    .top-container {
+        width: 100%;
+        font-size: 0.7em;
+        border-radius: 0px;
+    }
+
+    .forecast-container {
+        width: 100%;
+        font-size: 0.7em;
+        height: max-content;
+        padding: 0px;
+        flex-direction: row;
+    }
+    
+    .forecast-items {
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .dayInfos {
+        width: 50%;
+        border-bottom: 1px rgba(255, 254, 254, 0.24) solid;
+        padding: 25px 0px;   
+    }
+
+    .day-container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    input,
+    .searchBtn{
+        font-size: 0.9em;
+    }
+
+    #appLogo {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .dayInfos {
+        width: 100%;
+    }
 }
